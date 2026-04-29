@@ -1,0 +1,153 @@
+ ,navigation {
+    background: #ffb9e4;
+    padding: 20px;
+    border-radius: 12px;
+ }
+
+ .navigation h2 {
+    margin-top: 0;
+ }
+
+ .navigation li {
+    margin-bottom: 8px;
+ }
+ 
+.navigation a {
+    color: #ff85c1
+    font-weight:
+}
+
+ .profile {
+    text-align: center;
+    flex: 1;
+ }
+
+ .profile img{
+    width: 220px;
+    border-radius: 12px;
+ }
+
+ ,profile p{
+    font-size: 90%;
+
+ }
+ 
+ #introduction {
+    background: #ff4da6;
+    padding: 20px;
+    border-left: 6px solid #ff85c1
+    flex: 2;
+ }
+
+ #introduction {
+    font-style: italic;
+    margin-top: 0;
+ }
+
+ #introdcution p {
+    font-size: 120%;
+    line-height: 1.5;
+ }
+ 
+ .top-section {
+    display: ruby-text-container;
+    gap: 70px;
+    align-items: flex-start;
+    margin: 0 0 25px 0;
+ }
+ 
+ #page {
+    max-width: 900px;
+    margin: 0 auto 0 auto;
+    background: rgb(215, 151, 255);
+    padding: 30px;
+ }
+
+body {
+    background: #ffb9e4;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+/* BIG title */
+h1 {
+    color: #ff4da6;;
+    font-family: 'Press Start 2P' cursive;
+    font-size: 67px;
+
+    border-radius: 46px;
+    padding: 20px;
+    background: #1a1a1a;
+
+    /* glow effect ✨ */
+    text-shadow: 0 0 5px #ff4da6,
+                 0 0 10px #ff85c1,
+                 0 0 20px #ffb3d9;
+
+   box-shadow: 0 0 20px #ff85c1;             
+}
+
+/* smaller headings */
+h2{
+    font-size: 24px;
+    color: rgb(36, 35, 36);
+}
+
+/* paragraph box */
+p {
+    border: 3px solid #ffb3d9;
+    border-radius: 20px;
+    padding: 15px;
+    background: #fff0f6;
+    width: 60%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px #ffcce6;
+}
+
+/* list items */
+li {
+    color: #cc0066;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: normal; /* pixel fonts look better not bold */
+
+    text-decoration: none;
+    color: #5a2ca0;
+
+    text-shadow: 0 0 5px #c77dff;
+                 0 0 10px #e0aaff;
+}
+
+img { 
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    background: none;
+}
+
+/* hello kitty image only */
+.kitty {
+    border-radius: 35%;
+    border: 5px solid violet;
+    box-shadow: 0 0 15px violet;
+}
+
+/* list numbers */
+ol {
+    color: #ff4da6
+}
+
+/* list sapcing */
+li { 
+    margin-bottom: 30px;
+}
+
+/* list images spacing */
+li img { 
+    display: block;
+    margin: 15px auto;
+}
+
