@@ -63,3 +63,64 @@ $("#click-button").click(function () {
     console.log(clickCount);
 
 });
+
+function changeBobWorld(choice) {
+
+    if (choice == "bob") {
+
+        let message = "<p>Bob is a blob explorer with glitter in his pockets, one brain cell, and the confidence of someone who has never checked a map.</p>";
+
+        message = message + "<p>He is tiny, dramatic, and probably knows a secret about this place.</p>";
+
+        $("#environment-output").html(message);
+
+        $("#blob").css("box-shadow", "0 0 40px hotpink");
+
+    }
+
+    else if (choice == "trick") {
+
+        let message = "<p>You clicked the button that said do not click this.</p>";
+
+        message = message + "<p>Bob is not mad. Bob is just deeply disappointed and a little bit impressed.</p>";
+
+        $("#environment-output").html(message);
+
+        $("body").css("background-color", "purple");
+
+        $("#blob").css("transform", "rotate(10deg)");
+
+    }
+
+    else if (choice == "explore") {
+
+        let message = "<p>You and Bob walk deeper into the glowing environment.</p>";
+
+        message = message + "<p>The air smells like clouds, moss, and something that probably should not be touched.</p>";
+
+        $("#environment-output").html(message);
+
+        $(".text-box").css("background-color", "rgba(255, 200, 240, 0.5)");
+
+        $("#blob").css("width", "360px");
+
+    }
+
+    else {
+
+        $("#environment-output").html("<p>Bob does not understand what is happening.</p>");
+
+    }
+}
+
+$("#bob-button").click(function () {
+    changeBobWorld("bob");
+});
+
+$("#trick-button").click(function () {
+    changeBobWorld("trick");
+});
+
+$("#explore-button").click(function () {
+    changeBobWorld("explore");
+});
