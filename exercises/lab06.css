@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  background: #ffeef8;
+  color: #4b2b4b;
+  text-align: center;
+}
+
+h1 {
+  color: #ff69b4;
+  text-shadow: 2px 2px white;
+}
+
+#scene {
+  min-height: 500px;
+  background: linear-gradient(#d9ffd6, #fff8b8);
+  border: 3px solid #ff9edb;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+#scene::before {
+  content: "🌿 🌸 🌿 🌼 🌿 🌸 🌿";
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 35px;
+}
+
+#flower {
+  position: absolute;
+  right: 90px;
+  bottom: 90px;
+  font-size: 75px;
+  z-index: 1;
+}
+
+#creature {
+  width: 130px;
+  height: 130px;
+  background: #a8f5a2;
+  border: 4px solid #ff9edb;
+  border-radius: 40px;
+  padding: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  left: 40px;
+  top: 120px;
+  font-size: 55px;
+  transition: background 0.3s, border-radius 0.3s, transform 0.3s, box-shadow 0.3s;
+  z-index: 2;
+}
+
+#thought {
+  display: none;
+  position: absolute;
+  left: 95px;
+  top: -35px;
+  background: white;
+  border: 2px solid #ff69b4;
+  border-radius: 20px;
+  padding: 12px;
+  width: 210px;
+  font-size: 15px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.transformed {
+  background: #cbb7ff;
+  border-radius: 50%;
+  transform: scale(1.2) rotate(10deg);
+}
+
+.following {
+  box-shadow: 0 0 25px #ff69b4;
+}
+
+.eaten {
+  display: none;
+}
+
+#status {
+  font-size: 20px;
+  font-weight: bold;
+  color: #7b3f7b;
+}
