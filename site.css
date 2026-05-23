@@ -151,3 +151,18 @@ li img {
     margin: 15px auto;
 }
 
+.labs-list {
+    text-align: center;
+    list-style-position: inside;
+    padding: 0;
+}
+
+.labs-list li {
+    margin: 20px 0;
+}
+
+.labs-list a {
+    color: #4b0082;
+}
+
+
