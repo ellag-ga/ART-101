@@ -1,0 +1,69 @@
+body {
+  background-color: #ffeaf5;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #503050;
+}
+
+h1 {
+  color: hotpink;
+}
+
+#pond {
+  height: 500px;
+  background-color: #c9f7ff;
+  border: 3px solid pink;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+#frog {
+  position: absolute;
+  left: 80px;
+  bottom: 70px;
+  font-size: 80px;
+  cursor: pointer;
+}
+
+#flower {
+  position: absolute;
+  right: 120px;
+  bottom: 80px;
+  font-size: 70px;
+}
+
+#cloud {
+  position: absolute;
+  left: 260px;
+  top: 80px;
+  font-size: 70px;
+}
+
+#message {
+  display: none;
+  position: absolute;
+  right: 70px;
+  bottom: 170px;
+  background: white;
+  border: 2px solid hotpink;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.happy {
+  transform: scale(1.2);
+}
+
+.night {
+  background-color: #6f65b8;
+}
+
+.cloudy {
+  left: 430px;
+}
+
+#status {
+  font-weight: bold;
+  font-size: 20px;
+}
