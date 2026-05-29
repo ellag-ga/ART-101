@@ -1,0 +1,39 @@
+body {
+    background-color: #ffe6f2;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#content {
+    background-color: white;
+    border: 4px solid hotpink;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+h1 {
+    color: deeppink;
+}
+
+button {
+    background-color: hotpink;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: deeppink;
+}
+
+#output {
+    background-color: #fff0f7;
+    border: 2px dashed hotpink;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+}

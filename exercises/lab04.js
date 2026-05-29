@@ -1,36 +1,60 @@
 let count = 0;
 
-let buttonCreature = {
-    name: "Bob Button",
-    species: "sleepy blob",
-    favoriteFood: "attention",
-    moods: ["sleepy", "nervous", "glowing", "dramatic", "hopeful", "confused"]
-};
+let creatures = [
+    {
+        name: "Snugglefang",
+        species: "Marsh Dragon",
+        trait: "collects shiny buttons"
+    },
+
+    {
+        name: "Blooperton",
+        species: "Bubble Goblin",
+        trait: "sneezes glitter"
+    },
+
+    {
+        name: "Princess Pickles",
+        species: "Royal Swamp Beast",
+        trait: "rules over frogs"
+    },
+
+    {
+        name: "Toaster",
+        species: "Tiny Cave Monster",
+        trait: "eats homework"
+    },
+
+    {
+        name: "Muffin Doom",
+        species: "Chaos Hamster",
+        trait: "destroys kingdoms accidentally"
+    },
+
+    {
+        name: "Sir Wiggles",
+        species: "Forest Cryptid",
+        trait: "communicates through dancing"
+    }
+];
 
 $("#needy-button").click(function () {
 
-    count = count + 1;
+    let creatureIndex = count % creatures.length;
 
-    let arrayPosition = count - 1;
+    let creature = creatures[creatureIndex];
 
-    let currentMood = buttonCreature.moods[arrayPosition];
+    count++;
 
-    let message = "<p>You clicked me " + count + " times.</p>";
+    let message = "";
 
-    message = message + "<p>My current mood is " + currentMood + ".</p>";
+    message += "<h3>" + creature.name + "</h3>";
 
-    message = message + "<p>My name is " + buttonCreature.name + ".</p>";
+    message += "<p><strong>Species:</strong> " + creature.species + "</p>";
 
-    message = message + "<p>I am a " + buttonCreature.species + ".</p>";
+    message += "<p><strong>Special Trait:</strong> " + creature.trait + "</p>";
 
-    message = message + "<p>My favorite food is " + buttonCreature.favoriteFood + ".</p>";
+    message += "<p><strong>Creatures Discovered:</strong> " + count + "</p>";
 
     $("#output").html(message);
-
-    console.log(count);
-
-    console.log(arrayPosition);
-
-    console.log(currentMood);
-
 });

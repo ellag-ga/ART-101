@@ -1,28 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <title>What Is This Creature?</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #ffe6f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-    <title>Lab 4</title>
+        #content {
+            background-color: white;
+            border: 4px solid hotpink;
+            border-radius: 20px;
+            margin: 40px auto;
+            max-width: 700px;
+            padding: 30px;
+            text-align: center;
+        }
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        h1 {
+            color: deeppink;
+        }
 
-    <script src="lab04.js" defer></script>
+        h2 {
+            color: #b83280;
+        }
 
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        #needy-button {
+            background-color: hotpink;
+            border: none;
+            border-radius: 15px;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 20px;
+            padding: 15px 25px;
+        }
+
+        #needy-button:hover {
+            background-color: deeppink;
+        }
+
+        #output {
+            background-color: #fff0f7;
+            border: 2px dashed hotpink;
+            border-radius: 15px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
+    <main id="content">
+        <h1>✨ What Is This Creature? ✨</h1>
 
-    <h1>Lab 4: Data Button</h1>
+        <section id="intro">
+            <h2>Click the button to discover a strange creature!</h2>
+            <p>
+                Each click reveals a new fictional creature with a weird little personality.
+            </p>
+        </section>
 
-    <button id="needy-button">click me</button>
+        <section id="button-section">
+            <h2>Creature Generator</h2>
 
-    <div id="output"></div>
+            <button id="needy-button">
+                Reveal Creature!
+            </button>
 
+            <div id="output">
+                <p>The creature is waiting...</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let count = 0;
+
+        let creatures = [
+            {
+                name: "Snugglefang",
+                species: "Marsh Dragon",
+                trait: "collects shiny buttons"
+            },
+            {
+                name: "Blooperton",
+                species: "Bubble Goblin",
+                trait: "sneezes glitter"
+            },
+            {
+                name: "Princess Pickles",
+                species: "Royal Swamp Beast",
+                trait: "rules over frogs"
+            },
+            {
+                name: "Muffin Doom",
+                species: "Chaos Hamster",
+                trait: "destroys kingdoms accidentally"
+            },
+            {
+                name: "Sir Wiggles",
+                species: "Forest Cryptid",
+                trait: "communicates through dancing"
+            },
+            {
+                name: "Gooberella",
+                species: "Moon Gremlin",
+                trait: "steals snacks at midnight"
+            }
+        ];
+
+        document.getElementById("needy-button").addEventListener("click", function () {
+            let creatureIndex = count % creatures.length;
+            let creature = creatures[creatureIndex];
+
+            count++;
+
+            let message = "";
+            message += "<h3>" + creature.name + "</h3>";
+            message += "<p><strong>Species:</strong> " + creature.species + "</p>";
+            message += "<p><strong>Special Trait:</strong> " + creature.trait + "</p>";
+            message += "<p><strong>Creatures Discovered:</strong> " + count + "</p>";
+
+            document.getElementById("output").innerHTML = message;
+        });
+    </script>
 </body>
-
-</html>
+</html>x
